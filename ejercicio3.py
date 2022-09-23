@@ -1,5 +1,7 @@
-print("Todos los números del 0 al 10:", list(range(11)))
-print("Todos los números del -10 al 0:", list(range(-10, 1, 1)))
-print("Todos los números pares del 0 al 20: ", list(range(0,21,2)))
-print("Todos los números impares entre el -20 y el 0: ", list(range(-19,0,2)))
-print("Todos los números múltiplos de 5 del 0 al 50: ", list(range(0, 51, 5)))
+def lista_1(valor_inicio,valor_fin,incremento):
+    if valor_inicio >= valor_fin:
+        print()
+        return
+    print(list(range(valor_inicio,valor_inicio+incremento,incremento)), end=' ')
+    nuevo_valor = valor_inicio + incremento
+    lista_1(nuevo_valor, valor_fin, incremento)
